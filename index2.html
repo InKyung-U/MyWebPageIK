@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+  <title>Diagonal line example</title>
+
+  <canvas id="diagonal" style="border: 0px  solid;"  width="200" height="200"> </canvas>
+  <script>
+        function drawDiagonal() {
+           
+            var canvas = document.getElementById('diagonal');
+            var context = canvas.getContext('2d');
+
+            //절대 좌표로 패스를 생성한다.
+            context.beginPath(); //그릴준비가 되었는지 알수 있다.
+            context.moveTo(10,10); //시작점
+            context.lineTo(200, 200); //~까지 점
+            // 컨버스에 선을 그린다.
+            context.stroke();
+
+
+	    context.beginPath(); //그릴준비가 되었는지 알수 있다.
+            context.moveTo(10,200); //시작점
+            context.lineTo(200, 10); //~까지 점
+            // 컨버스에 선을 그린다.
+            context.stroke();
+
+
+
+
+        }
+
+ 
+
+        window.addEventListener("load", drawDiagonal, true);
+  </script>
+</html>
