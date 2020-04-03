@@ -1,35 +1,54 @@
 ﻿<!DOCTYPE html>
 <html>
-  <title>Diagonal line example</title>
+<head>
+<title> Table TAG 연습 </title>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
 
-  <canvas id="diagonal" style="border: 0px  solid;"  width="200" height="200"> </canvas>
-  <script>
-        function drawDiagonal() {
-           
-            var canvas = document.getElementById('diagonal');
-            var context = canvas.getContext('2d');
+<h1>Table TAG 연습 (과제 #03-01) </h1>
 
-            //절대 좌표로 패스를 생성한다.
-            context.beginPath(); //그릴준비가 되었는지 알수 있다.
-            context.moveTo(10,10); //시작점
-            context.lineTo(200, 200); //~까지 점
-            // 컨버스에 선을 그린다.
-            context.stroke();
+<table width="250px" height="200px">
+
+  <tr >
+    <th colspan="4" width="150px"  height="100px"  >1</th>
+    <th colspan="4" width="100px"  height="100px"  >2</th>
+
+ 	 <tr>
+  	  <th rowspan="4" colspan="4" width="150px" height="100px" >3</th>
+  	  <th width="60px" height="50px" >4</th>
+  	  <th colspan="4"width="50px" height="50px" >5</th>
+
+		  <tr>
+
+  			  <th rowspan="2" colspan="2" width="40px" height="50px" >6</th>
+  			  <th height="25px" >7</th>
+  			  <th height="25px" >8</th>
+	
+				<tr>
+					<th width="25px" height="25px"  >9 </th>
+					<th width="25px" >10 </th>
+				</tr>
+		  <tr>
+	
+
+ 	 </tr> 
+
+  </tr> 
 
 
-	    context.beginPath(); //그릴준비가 되었는지 알수 있다.
-            context.moveTo(10,200); //시작점
-            context.lineTo(200, 10); //~까지 점
-            // 컨버스에 선을 그린다.
-            context.stroke();
 
 
 
 
-        }
 
- 
+</table>
 
-        window.addEventListener("load", drawDiagonal, true);
-  </script>
+<p> 웹프로그래밍2 과목 유인경의 실습입니다. </p>
+
+</body>
 </html>
